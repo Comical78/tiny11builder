@@ -169,8 +169,7 @@ foreach ($packagePattern in $packagePatterns) {
     }
 }
 
-Write-Host "Do you want to enable .NET 3.5? (y/n)"
-$input = Read-Host
+$input = Read-Host "Do you want to enable .NET 3.5? (y/n)"
 
 # Check the user's input
 if ($input -eq 'y') {
@@ -187,6 +186,18 @@ else {
     # If the user entered anything other than 'y' or 'n', ask for input again
     Write-Host "Invalid input. Please enter 'y' to enable .NET 3.5 or 'n' to continue without installing .net 3.5."
 }
+$input_hosts = Read-Host "Do you wish to block Microsoft access to the ISO? This will disable updates, login, and some services. (y/n)"
+if ($input_hosts -eq 'y') {
+    Write-Host "Blocking the domains..."
+    # first, we have to replace the \hosts with Windows\System32\drivers\etc\hosts
+}
+elseif ($input_hosts -eq 'n') {
+    Write-Host "You chose not to block Microsoft services. Continuing..."
+}
+else {
+    Write-Host "Invalid input. Please enter 'y' or 'n'."
+}
+
 Write-Host "Removing Edge:"
 Remove-Item -Path "$mainOSDrive\scratchdir\Program Files (x86)\Microsoft\Edge" -Recurse -Force >null
 Remove-Item -Path "$mainOSDrive\scratchdir\Program Files (x86)\Microsoft\EdgeUpdate" -Recurse -Force >null

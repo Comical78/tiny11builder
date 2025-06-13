@@ -1,0 +1,17 @@
+# Blocam domenile de la Windows Update/ We are blocking the domains for Windows Update
+127.0.0.1 windowsupdate.com
+127.0.0.1 www.windowsupdate.com
+127.0.0.1 update.microsoft.com
+127.0.0.1 www.update.microsoft.com
+127.0.0.1 download.windowsupdate.com
+127.0.0.1 wuau.download.windowsupdate.com
+127.0.0.1 ntservicepack.microsoft.com
+127.0.0.1 catalog.update.microsoft.com
+127.0.0.1 fe2.update.microsoft.com
+127.0.0.1 sls.update.microsoft.com
+127.0.0.1 statsfe2.ws.microsoft.com
+127.0.0.1 windowsupdate.ws.microsoft.com
+127.0.0.1 au.download.windowsupdate.com
+127.0.0.1 tlu.dl.delivery.mp.microsoft.com
+127.0.0.1 fe2.delivery.mp.microsoft.com
+127.0.0.1 clientconfig.microsoftupdate.com
